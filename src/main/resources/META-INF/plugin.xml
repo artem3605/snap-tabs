@@ -9,10 +9,37 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.artem3605.snaptabs.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-    </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.artem3605.snaptabs.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+    </extensions>
+    <projectListeners>
+        <listener class="com.github.artem3605.snaptabs.listeners.FileEditorManagerListener" topic="com.intellij.openapi.fileEditor.FileEditorManagerListener"/>
+    </projectListeners>
+    <actions>
+        <action id="com.github.artem3605.snaptabs.actions.SortTabsByTypeAction"
+                class="com.github.artem3605.snaptabs.actions.SortTabsByTypeAction" text="Sort by Types">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt R"/>
+        </action>
+        <action id="com.github.artem3605.snaptabs.actions.CloseFilesByTypeAction"
+                class="com.github.artem3605.snaptabs.actions.CloseFilesByTypeAction" text="Close Files by Type">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt D"/>
+        </action>
+        <action id="com.github.artem3605.snaptabs.actions.ReopenLastClosedFileAction"
+                class="com.github.artem3605.snaptabs.actions.ReopenLastClosedFileAction"
+                text="Reopen Last Closed File">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt Q"/>
+        </action>
+        <action id="com.github.artem3605.snaptabs.actions.LoadSessionAction"
+                class="com.github.artem3605.snaptabs.actions.LoadSessionAction" text="Load Session">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt U"/>
+        </action>
+        <action id="com.github.artem3605.snaptabs.actions.SaveSessionAction"
+                class="com.github.artem3605.snaptabs.actions.SaveSessionAction" text="Save Session">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt W"/>
+        </action>
+        <action id="com.github.artem3605.snaptabs.actions.DeleteSessionAction"
+                class="com.github.artem3605.snaptabs.actions.DeleteSessionAction" text="Delete Session">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt OPEN_BRACKET"/>
+        </action>
+    </actions>
+
 </idea-plugin>
