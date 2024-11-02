@@ -15,7 +15,7 @@ class DeleteSessionAction : AnAction() {
         SwingUtilities.invokeLater {
             SessionManager.getAllSessionNames(project) { sessions ->
                 val dialog = SessionSearchDialog(sessions) { sessionName ->
-                    val result = JOptionPane.showConfirmDialog(null, MyBundle.getMessage("confirmationOfDeletingMessage") + "'$sessionName'?", MyBundle.getMessage("confirmationOfDeleting"), JOptionPane.YES_NO_OPTION)
+                    val result = JOptionPane.showConfirmDialog(null, MyBundle.getMessage("confirmationOfDeletingMessage") + " '$sessionName'?", MyBundle.getMessage("confirmationOfDeleting"), JOptionPane.YES_NO_OPTION)
                     if (result == JOptionPane.YES_OPTION) {
                         SessionManager.deleteSession(project, sessionName)
                     }

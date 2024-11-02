@@ -17,28 +17,27 @@
     <actions>
         <action id="com.github.artem3605.snaptabs.actions.SortTabsByTypeAction"
                 class="com.github.artem3605.snaptabs.actions.SortTabsByTypeAction" text="Sort by Types">
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt R"/>
-        </action>
-        <action id="com.github.artem3605.snaptabs.actions.CloseFilesByTypeAction"
-                class="com.github.artem3605.snaptabs.actions.CloseFilesByTypeAction" text="Close Files by Type">
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt D"/>
-        </action>
-        <action id="com.github.artem3605.snaptabs.actions.ReopenLastClosedFileAction"
-                class="com.github.artem3605.snaptabs.actions.ReopenLastClosedFileAction"
-                text="Reopen Last Closed File">
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt Q"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift Z"/>
         </action>
         <action id="com.github.artem3605.snaptabs.actions.LoadSessionAction"
                 class="com.github.artem3605.snaptabs.actions.LoadSessionAction" text="Load Session">
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt U"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift X"/>
         </action>
         <action id="com.github.artem3605.snaptabs.actions.SaveSessionAction"
                 class="com.github.artem3605.snaptabs.actions.SaveSessionAction" text="Save Session">
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt W"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift S"/>
         </action>
         <action id="com.github.artem3605.snaptabs.actions.DeleteSessionAction"
                 class="com.github.artem3605.snaptabs.actions.DeleteSessionAction" text="Delete Session">
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt OPEN_BRACKET"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift D"/>
+        </action>
+        <action id="com.github.artem3605.snaptabs.actions.ReopenLastClosedFileAction"
+                class="com.github.artem3605.snaptabs.actions.ReopenLastClosedFileAction" text="Reopen Last Closed File">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift COMMA"/>
+        </action>
+        <action id="com.github.artem3605.snaptabs.actions.CloseFilesByTypeAction"
+                class="com.github.artem3605.snaptabs.actions.CloseFilesByTypeAction" text="Close FIles by Type">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift QUOTE"/>
         </action>
     </actions>
 
