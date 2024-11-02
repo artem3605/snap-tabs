@@ -1,5 +1,6 @@
 package com.github.artem3605.snaptabs.actions
 
+import com.github.artem3605.snaptabs.MyBundle
 import com.github.artem3605.snaptabs.ui.SessionSearchDialog
 import com.github.artem3605.snaptabs.managers.SessionManager
 import com.intellij.openapi.actionSystem.AnAction
@@ -14,7 +15,7 @@ class DeleteSessionAction : AnAction() {
         SwingUtilities.invokeLater {
             SessionManager.getAllSessionNames(project) { sessions ->
                 val dialog = SessionSearchDialog(sessions) { sessionName ->
-                    val result = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete the session '$sessionName'?", "Confirm Delete", JOptionPane.YES_NO_OPTION)
+                    val result = JOptionPane.showConfirmDialog(null, MyBundle.getMessage("confirmationOfDeletingMessage") + "'$sessionName'?", MyBundle.getMessage("confirmationOfDeleting"), JOptionPane.YES_NO_OPTION)
                     if (result == JOptionPane.YES_OPTION) {
                         SessionManager.deleteSession(project, sessionName)
                     }
